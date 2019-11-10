@@ -1,6 +1,15 @@
-// Package main provides ...
+// Package mainmain provides ...
 package main
 
-func main() {
+import (
+	"server02/cache"
+	"server02/http"
+	"server02/tcp"
+)
 
+func main() {
+	c := cache.New("inmemory")
+	go tcp.New(c).Listhen()
+	http.New(c).Listen()
 }
+

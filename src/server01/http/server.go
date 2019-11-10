@@ -2,7 +2,7 @@
 package http
 
 import (
-	"../cache"
+	"server01/cache"
 	"net/http"
 )
 

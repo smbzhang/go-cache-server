@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export GOPATH=`pwd`
+export GOPATH=`pwd`:$GOPATH
 echo $GOPATH
 curdir=`pwd`
 
@@ -17,6 +17,12 @@ if [[ ! -e "${curdir}/src/rocksdb" ]]; then
     ln -s "${curdir}/rocksdb" "${curdir}/src"
 fi
 
-cd src/server01 && go build
+cd src/cache-benchmark && go build && cd $curdir
+cd src/server01 && go build && cd $curdir
+cd src/server02 && go build && cd $curdir
+
+cd src/client && go build && cd $curdir
+
+
 
 
