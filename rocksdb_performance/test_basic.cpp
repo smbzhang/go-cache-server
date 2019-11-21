@@ -4,7 +4,6 @@
 
 int main(int argc, char** argv)
 {
-/*
     variables_map vm = parse(argc, argv, 0);
     int total = vm["total"].as<int>();
     int valueSize = vm["size"].as<int>();
@@ -40,6 +39,5 @@ int main(int argc, char** argv)
               << double(end - start) / total << " usec average" << std::endl;
 
     delete db;
-    */
     return 0;
 }
