@@ -20,8 +20,10 @@ fi
 cd src/cache-benchmark && go build && cd $curdir
 cd src/server01 && go build && cd $curdir
 cd src/server02 && go build && cd $curdir
+cd src/server03 && go build && cd $curdir
 
 cd src/client && go build && cd $curdir
+
 
 
 
